@@ -7,16 +7,13 @@ class Interface:
         frame = Frame(master)
         frame.pack()
 
-        self.button = Button(
-            frame, text="QUIT", fg="red", command=frame.quit
+        self.exit = Button(
+            frame, text="Exit", fg="blue", command=frame.quit
             )
         self.button.pack(side=LEFT)
 
-        self.hi_there = Button(frame, text="Hello", command=self.say_hi)
+        self.generate = Button(frame, text="Generate", command=randomiser.mixer())
         self.hi_there.pack(side=LEFT)
-
-    def say_hi(self):
-        print "hi there, everyone!"
 
 root = Tk()
 

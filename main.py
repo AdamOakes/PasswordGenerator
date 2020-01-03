@@ -2,6 +2,8 @@ import math, random
 
 class Randomiser:
         
+    int passLength = Generator.getLen()
+        
     def __init__(self): 
       
     def mixer(int passLength):
@@ -21,11 +23,12 @@ class Randomiser:
         if(Interface.numVal == true):
             numVal = 'string.punctuation'
         
-        # not sure what this will do if one of these options isn't selected.
+        
+        # Think this could do with a for loop, not sure what this will do if one of these options isn't selected.
         password_characters = upperVal + lowerVal + symVal + numVal
         return ''.join(random.choice(password_characters) for i in  range(passLength))   
       
-
+# Not sure if this class is required since this info can be collected directly from Interface.
 class Generator:
     
     def __init__(self):

@@ -10,7 +10,7 @@ class Interface:
 
     window = Tk()
     window.title('Password Generator')
-
+    #this is a some test text for git
     def __init__(self, master):
 
         frame = Frame(master)

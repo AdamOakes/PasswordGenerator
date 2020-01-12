@@ -1,12 +1,13 @@
 import math, random
+import Interface
 
 class Randomiser:
+    
+    passLength = Generator.getLen()
         
-    int passLength = Generator.getLen()
-        
-    def __init__(self): 
+    #def __init__(self): 
       
-    def mixer(int passLength):
+    def mixer(passLength):
         # this would work but need to give user option of which char types to use, so need to select them individually.
         upperVal = ''
         lowerVal = ''
@@ -31,32 +32,37 @@ class Randomiser:
 # Not sure if this class is required since this info can be collected directly from Interface.
 class Generator:
     
-    def __init__(self):
+    #def __init__(self):
 
     def getLen():
-        return len = Interface.lengthVal.get()
+        len = Interface.lengthVal.get()
+        return len 
         
     def getUpper():
         upper = Interface.upperVal.get()
         if(upper == true):
             return true
-        else return false
+        else:
+             return false
         
-    
     def getLower():
         lower = Interface.lowerVal.get()
         if(lower == true):
             return true
-        else return false
+        else:
+             return false
 
     def getSym():
         sym = Interface.symVal.get()
-            if(sym == true):
-                return true
-            else return false
+        if(sym == true):
+            return true
+        else:
+           return false
 
     def getNum():
         num = Interface.numVal.get()
         if(num == true):
             return true
-        else return false
+        else:
+             return false
+
